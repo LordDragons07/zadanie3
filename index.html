@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Разработка Web-интерфейса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="site-header">
+        <img id="logo" src="logo.jpg" alt="Логотип сайта">
+        <span id="site-title">Задание 3</span>
+    </header>
+
+    <nav id="site-nav">
+        <ul>
+            <li><a href="#list">Список Гиперссылок</a></li>
+            <li><a href="#table">Таблица</a></li>
+            <li><a href="#form">Форма</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+
+    <h1>Моя Web-страница(Задание1)</h1>
+
+    <div id="reorder-wrapper">
+
+        <section id="list-section">
+            <h2 id="list">Список гиперссылок</h2>
+            <ul>
+
+                <li>
+                    <a href="http://kubsu.ru/">1. КубГУ - HTTP</a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru/">2. КубГУ - HTTPS</a>
+                </li>
+
+                <li>
+                    3.
+                    <a href="https://kubsu.ru/">
+                        <img src="reaper.jpg" alt="КубГУ" width="200">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">4. Внутренняя страница</a>
+                </li>
+
+                <li>
+                    <a href="/">5. Главная страница</a>
+                </li>
+
+                <li>
+                    <a href="#form">6. Перейти к форме</a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/?name=Vladislav&amp;age=18&amp;group=pi21%2F1">
+                        7. URL с тремя параметрами
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/?id=123">
+                        8. URL с параметром id
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./page.html">
+                        9. Страница текущего каталога
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./about/page.html">
+                        10. Страница в каталоге about
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../page.html">
+                        11. Страница на уровень выше
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../page.html">
+                        12. Страница на два уровня выше
+                    </a>
+                </li>
+
+                <li>
+                    <p>
+                        13. Автор «Властелина колец» и «Хоббита» это
+                        <a href="https://ru.wikipedia.org/wiki/Толкин,_Джон_Рональд_Руэл">
+                            Дж. Р. Р. Толкин
+                        </a>.
+                    </p>
+                </li>
+
+                <li>
+                    <a href="https://ru.wikipedia.org/wiki/HTML#История">
+                        14. Фрагмент сторонней страницы
+                    </a>
+                </li>
+
+                <li>
+                    15. Карта ссылок:
+                    <img src="Loreal.jpg"
+                         alt="Карта ссылок"
+                         width="300"
+                         usemap="#kubgu-map">
+
+                    <map name="kubgu-map">
+                        <area shape="rect"
+                              coords="0,0,150,150"
+                              href="https://ru.wikipedia.org/wiki/%D0%93%D1%8D%D0%BD%D0%B4%D0%B0%D0%BB%D1%8C%D1%84"
+                              alt="Прямоугольная область">
+
+                        <area shape="circle"
+                              coords="225,75,50"
+                              href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BA%D0%BA%D0%B5%D0%BB%D0%BB%D0%B5%D0%BD,_%D0%98%D1%8D%D0%BD"
+                              alt="Круглая область">
+                    </map>
+                </li>
+
+                <li>
+                    <a href="">
+                        16. Ссылка с пустым href
+                    </a>
+                </li>
+
+                <li>
+                    <a>
+                        17. Ссылка без href
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/" rel="nofollow">
+                        18. Ссылка с nofollow
+                    </a>
+                </li>
+
+                <li>
+                    <noindex>
+                        <a href="https://example.com/">
+                            19. Контент, запрещённый к индексации
+                        </a>
+                    </noindex>
+                </li>
+
+                <li>
+                    20. Нумерованный список ссылок с подписями (title):
+                    <ol>
+                        <li>
+                            <a href="https://kubsu.ru/" title="Официальный сайт КубГУ">
+                                КубГУ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.wikipedia.org/" title="Энциклопедия">
+                                Википедия
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/" title="Сервис GitHub">
+                                GitHub
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="ftp://student:password@example.com/file.txt">
+                        21. FTP-ссылка с авторизацией
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="table-section">
+            <h2 id="table">Таблица</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Объединённая строка (11-14)</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 21</td>
+                        <td>Ячейка 22</td>
+                        <td rowspan="2">Ячейка 23-33<br>(объединена по вертикали)</td>
+                        <td>Ячейка 24</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 31</td>
+                        <td>Ячейка 32</td>
+                        <td>Ячейка 34</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 41</td>
+                        <td>Ячейка 42</td>
+                        <td>Ячейка 43</td>
+                        <td>Ячейка 44</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 51</td>
+                        <td>Ячейка 52</td>
+                        <td>Ячейка 53</td>
+                        <td>Ячейка 54</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 61</td>
+                        <td>Ячейка 62</td>
+                        <td>Ячейка 63</td>
+                        <td>Ячейка 64</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <h2 id="form">Форма</h2>
+
+    <form action="#" method="post">
+
+        <p>
+            <label>
+                ФИО:
+                <input type="text" name="fio" pattern="[А-Яа-яЁё\s]+" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Телефон:
+                <input type="tel" name="phone" pattern="[0-9+\-\s()]+" minlength="11" maxlength="12" required
+                       oninput="this.value = this.value.replace(/[^0-9+\-\s()]/g, '')">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                E-mail:
+                <input type="email" name="email" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Дата рождения:
+                <input type="date" name="birthdate" max="2026-10-01" required>
+            </label>
+        </p>
+
+        <p>
+            Пол:
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Мужской
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                Женский
+            </label>
+        </p>
+
+        <p>
+            Любимые языки программирования:
+            <br>
+
+            <select name="languages" multiple>
+                <option value="pascal">Pascal</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="haskel">Haskel</option>
+                <option value="clojure">Clojure</option>
+                <option value="prolog">Prolog</option>
+                <option value="scala">Scala</option>
+            </select>
+        </p>
+
+        <p>
+            <label>
+                Биография:
+                <br>
+                <textarea name="biography" rows="6" cols="40"></textarea>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" name="contract" required>
+                С контрактом ознакомлен
+            </label>
+        </p>
+
+        <p>
+            <button type="submit">Сохранить</button>
+        </p>
+
+    </form>
+
+    </main>
+
+    <footer id="site-footer">
+        <p>&copy; Владислав Рагимов</p>
+    </footer>
+
+</body>
+</html>

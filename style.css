@@ -1,0 +1,157 @@
+/* ==========================================================
+   MOBILE FIRST: базовые правила — сначала для смартфонов
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Шапка — 100% ширины экрана, на мобильном лого и название в столбик */
+#site-header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#site-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Навигация — 100% ширины экрана, ссылки вертикальным списком */
+#site-nav {
+    width: 100%;
+    background-color: #34495e;
+    padding: 10px 20px;
+}
+
+#site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Контент — 100% ширины экрана на мобильном */
+#content {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Блок таблицы и списка ссылок — на смартфоне таблица выводится ВЫШЕ
+   списка ссылок с помощью Flex Box order, хотя в HTML список идёт первым */
+#reorder-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#table-section {
+    order: 1;
+}
+
+#list-section {
+    order: 2;
+}
+
+/* Таблица */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#data-table th,
+#data-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+#data-table thead th {
+    background-color: #34516e;
+    color: #fff;
+}
+
+#data-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#data-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Подвал — 100% ширины экрана */
+#site-footer {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 30px;
+}
+
+
+/* ==========================================================
+   MEDIA QUERY: правила для планшетов и десктопов (от 800px)
+   ========================================================== */
+
+@media screen and (min-width: 800px) {
+
+    /* Шапка — лого и название в строку */
+    #site-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Навигация — ссылки в строку, ограничена 960px и центрирована */
+    #site-nav {
+        max-width: 960px;
+        margin: 0 auto;
+        background-color: transparent;
+    }
+
+    #site-nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #site-nav a {
+        color: #2c3e50;
+    }
+
+    /* Контент — ограничен 960px и центрирован */
+    #content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+}
